@@ -12,7 +12,7 @@ def create_project_hash
     projects[title.to_sym] = {
       image_link: project.css("div.project-thumbnail img").attribute('src').value,
       description: project.css("p.bbcard_blurb").text,
-      loaction: project.css("span.location-name").text,
+      location: project.css("span.location-name").text,
       percent_funded: project.css("li.funded strong").text.gsub('%', '').to_i
     }
   end
