@@ -27,7 +27,6 @@ describe "#create_project_hash" do
 
   it "each project has a description which is a string" do
     create_project_hash.each do |project_title, info_hash|
-      binding.pry
       expect(info_hash[:description].class).to eq(String)
     end
   end
